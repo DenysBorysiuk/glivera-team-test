@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = env => {
   return {
@@ -42,9 +43,19 @@ module.exports = env => {
         },
         {
           test: /\.svg$/,
+          exclude: path.resolve(__dirname, 'src', 'images', 'icons'),
           type: 'asset/resource',
           generator: {
             filename: path.join('icons', '[name].[contenthash][ext]'),
+          },
+        },
+        {
+          test: /\.svg$/,
+          loader: 'svg-sprite-loader',
+          include: path.resolve(__dirname, 'src', 'images', 'icons'),
+          options: {
+            extract: true,
+            spriteFilename: 'sprite.svg',
           },
         },
       ],
@@ -56,6 +67,9 @@ module.exports = env => {
         filename: 'index.html',
       }),
       new CleanWebpackPlugin(),
+      new CopyPlugin({
+        patterns: [{ from: './src/images/sprite.svg', to: 'images' }],
+      }),
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
       }),
@@ -76,7 +90,7 @@ module.exports = env => {
                 ['gifsicle', { interlaced: true }],
                 ['jpegtran', { progressive: true }],
                 ['optipng', { optimizationLevel: 5 }],
-                ['svgo', { name: 'preset-default' }],
+                // ['svgo', { name: 'preset-default' }],
               ],
             },
           },
