@@ -1,9 +1,14 @@
 .sidebar {
+  display: none;
   width: 250px;
   background-color: #1e293b;
   color: #fff;
   padding: 20px;
-  display: flex;
+  //   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+  }
 }
