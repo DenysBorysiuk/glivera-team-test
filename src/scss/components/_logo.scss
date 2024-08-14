@@ -1,16 +1,17 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
+  height: 39px;
+
+  &__img {
+    // width: 195px;
+    // height: 39px;
+  }
 
   &__text {
-    display: none;
-
-    // @include fonts(30px, 35px);
-    color: var(--light-font-cl);
-
-    @media screen and (min-width: $tablet) {
-      display: flex;
-    }
+    font-size: 10px;
+    font-weight: 500;
+    color: $grey-font-cl;
   }
 }

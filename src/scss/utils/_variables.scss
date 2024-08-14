@@ -1,18 +1,14 @@
-:root {
-  /* Fonts */
-  --primary-font: 'Roboto', sans-serif;
+// colors
+$accent-cl: #5932ea;
 
-  /* colors */
-  --accent-cl: #5932ea;
+$main-font-cl: #292d32;
+$secondary-font-cl: #9197b3;
+$title-font-cl: #000;
+$subtitle-font-cl: #b5b7c0;
+$grey-font-cl: #838383;
 
-  --main-font-cl: #292d32;
-  --secondary_font-cl: #9197b3;
-  --title-font-cl: #000;
-  --subtitle-font-cl: #b5b7c0;
-
-  --main-bg-cl: #fff;
-  --secondary-bg-cl: #f9fbff;
-}
+$main-bg-cl: #fff;
+$secondary-bg-cl: #f9fbff;
 
 // animation
 $animation: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
