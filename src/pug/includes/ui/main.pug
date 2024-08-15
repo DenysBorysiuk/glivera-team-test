@@ -1,0 +1,13 @@
+main
+    section.customers
+        div.customers__user-bar
+            div
+                h2.customers__title All Customers
+                p.customers__status Active Members
+            div.customers__search
+                svg.icon.customers__search-icon(width='24' height='24')
+                    use(xlink:href="/images/sprite.svg#search")  
+                input.customers__search-input(type="text" placeholder="Search")    
+
+        include customer-list
+
