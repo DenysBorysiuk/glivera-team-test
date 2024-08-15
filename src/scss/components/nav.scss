@@ -13,7 +13,7 @@
     color: $secondary-font-cl;
     border-radius: 8px;
 
-    transition: background-color $animation, color $animation;
+    transition: background-color $animation, color $animation, box-shadow $animation;
 
     &:hover,
     &:focus,

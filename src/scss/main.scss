@@ -1,5 +1,6 @@
 // utils styles
 @import './utils/variables';
+@import './utils/visually-hidden';
 
 // base styles
 @import './base/common';
@@ -8,6 +9,7 @@
 // components styles
 @import './components/logo';
 @import './components/nav';
+@import './components/user-info';
 
 // layout styles
 @import './layout/dashboard';
