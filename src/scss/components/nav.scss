@@ -1,28 +1,31 @@
 .nav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
   &__list {
     display: flex;
-  }
-
-  &__item {
-    color: $secondary-font-cl;
+    flex-direction: column;
+    gap: 18px;
   }
 
   &__link {
     display: flex;
     align-items: center;
+    gap: 14px;
+    padding: 11px;
     color: $secondary-font-cl;
+    border-radius: 8px;
 
-    &--active {
-      background-color: $accent-cl;
-    }
+    transition: background-color $animation, color $animation;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &--active {
       background-color: $accent-cl;
+      color: $white-cl;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+  }
+
+  &__link-text {
+    margin-right: auto;
+    text-transform: capitalize;
   }
 }

@@ -1,9 +1,9 @@
 .dashboard {
   display: flex;
+  gap: 71px;
 
   &__content {
     flex-grow: 1;
     height: 100vh;
-    background-color: $secondary-bg-cl;
   }
 }
