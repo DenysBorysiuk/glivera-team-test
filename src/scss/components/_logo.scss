@@ -1,14 +1,16 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 4px;
-  height: 39px;
-
-  &__icon {
-    color: black;
-  }
+  gap: 8px;
+  color: $title-font-cl;
 
   &__text {
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  &__text-secondary {
+    margin-left: 4px;
     font-size: 10px;
     font-weight: 500;
     color: $grey-font-cl;

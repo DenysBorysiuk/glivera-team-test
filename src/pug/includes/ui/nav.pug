@@ -1,14 +1,24 @@
-nav.sidebar__nav
-    ul.dashboard__menu-list
-        li.dashboard__menu-item.dashboard__menu-item--active
-            a.dashboard__menu-link(href="#") Dashboard
-        li.dashboard__menu-item
-            a.dashboard__menu-link(href="#") Product
-        li.dashboard__menu-item
-            a.dashboard__menu-link(href="#") Customers
-        li.dashboard__menu-item
-            a.dashboard__menu-link(href="#") Income
-        li.dashboard__menu-item
-            a.dashboard__menu-link(href="#") Promote
-        li.dashboard__menu-item
-            a.dashboard__menu-link(href="#") Help
+nav.nav.sidebar__nav
+    ul.nav__list
+        li.nav__item.nav__item--active
+            a.nav__link(href="#")
+                svg.icon(width='24' height='24')
+                    use(xlink:href="/images/sprite.svg#logo") 
+                span Dashboard
+
+        li.nav__item
+            a.nav__link(href="#")
+                svg.icon(width='24' height='24')
+                    use(xlink:href="/images/sprite.svg#logo") 
+                span.nav__text Product
+                svg.icon(width='37' height='37')
+                    use(xlink:href="/images/sprite.svg#chevron") 
+
+        li.nav__item.nav__item--active
+            a.nav__link(href="#") Customers
+        li.nav__item
+            a.nav__link(href="#") Income
+        li.nav__item
+            a.nav__link(href="#") Promote
+        li.nav__item
+            a.nav__link(href="#") Help
