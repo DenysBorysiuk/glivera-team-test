@@ -1,47 +1,11 @@
 nav.nav.sidebar__nav
     ul.nav__list
-        li.nav__item.nav__item--active
-            a.nav__link(href="#")
-                svg.icon(width='24' height='24')
-                    use(xlink:href="/images/sprite.svg#dashboard") 
-                span.nav__link-text dashboard
-
-        li.nav__item
-            a.nav__link(href="#")
-                svg.icon(width='24' height='24')
-                    use(xlink:href="/images/sprite.svg#product") 
-                span.nav__link-text product
-                svg.icon(width='16' height='16')
-                    use(xlink:href="/images/sprite.svg#chevron") 
-
-        li.nav__item
-            a.nav__link.nav__link--active(href="#") 
-                svg.icon(width='24' height='24')
-                    use(xlink:href="/images/sprite.svg#customers") 
-                span.nav__link-text customers
-                svg.icon(width='16' height='16')
-                    use(xlink:href="/images/sprite.svg#chevron") 
-
-        li.nav__item
-            a.nav__link(href="#") 
-                svg.icon(width='24' height='24')
-                    use(xlink:href="/images/sprite.svg#income") 
-                span.nav__link-text income
-                svg.icon(width='16' height='16')
-                    use(xlink:href="/images/sprite.svg#chevron") 
-
-        li.nav__item
-            a.nav__link(href="#") 
-                svg.icon(width='24' height='24')
-                    use(xlink:href="/images/sprite.svg#promote") 
-                span.nav__link-text promote
-                svg.icon(width='16' height='16')
-                    use(xlink:href="/images/sprite.svg#chevron") 
-
-        li.nav__item
-            a.nav__link(href="#") 
-                svg.icon(width='24' height='24')
-                    use(xlink:href="/images/sprite.svg#help") 
-                span.nav__link-text help
-                svg.icon(width='16' height='16')
-                    use(xlink:href="/images/sprite.svg#chevron") 
+        each item, index in ['dashboard', 'product', 'customers', 'income', 'promote', 'help']
+            li.nav__item(class=(item === 'customers' ? 'nav__item--active' : ''))
+                a.nav__link(href="#", class=(item === 'customers' ? 'nav__link--active' : ''))
+                    svg.icon(width='24' height='24')
+                        use(xlink:href=`/images/sprite.svg#${item}`)
+                    span.nav__link-text= item
+                    if index > 0
+                        svg.icon(width='16' height='16')
+                            use(xlink:href="/images/sprite.svg#chevron")
