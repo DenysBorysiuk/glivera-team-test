@@ -44,14 +44,14 @@
   }
 
   &__cell--status-active {
-    color: #008667;
-    background-color: rgba(21, 192, 152, 0.38);
-    border-color: #00b086;
+    color: $green-font-cl;
+    background-color: $green-bg-cl;
+    border-color: $green-b-cl;
   }
 
   &__cell--status-inactive {
-    color: #df0303;
-    background-color: #ffc4c4;
-    border-color: #df0404;
+    color: $red-cl;
+    background-color: $red-bg-cl;
+    border-color: $red-cl;
   }
 }

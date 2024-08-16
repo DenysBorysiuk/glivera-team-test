@@ -2,6 +2,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: $primary-font;
+  background-color: $main-bg-cl;
+}
+
 img {
   display: block;
   width: 100%;
@@ -9,15 +14,10 @@ img {
   object-fit: cover;
 }
 
-body {
-  font-family: $primary-font;
-  background-color: $main-bg-cl;
+.icon {
+  fill: currentColor;
 }
 
 .no-scroll {
   overflow: hidden;
-}
-
-.icon {
-  fill: currentColor;
 }
