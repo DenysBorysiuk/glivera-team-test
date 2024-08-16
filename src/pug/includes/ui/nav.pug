@@ -4,8 +4,8 @@ nav.nav.sidebar__nav
             li.nav__item(class=(item === 'customers' ? 'nav__item--active' : ''))
                 a.nav__link(href="#", class=(item === 'customers' ? 'nav__link--active' : ''))
                     svg.icon(width='24' height='24')
-                        use(xlink:href=`/images/sprite.svg#${item}`)
+                        use(xlink:href=`./images/sprite.svg#${item}`)
                     span.nav__link-text= item
                     if index > 0
                         svg.icon(width='16' height='16')
-                            use(xlink:href="/images/sprite.svg#chevron")
+                            use(xlink:href="./images/sprite.svg#chevron")
