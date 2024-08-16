@@ -12,8 +12,13 @@
   }
 
   &__text {
-    font-weight: 500;
+    font-size: 12px;
     color: $subtitle-font-cl;
+
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 
   &__list {
@@ -37,7 +42,7 @@
     background-color: $secondary-bg-cl;
     border-radius: 4px;
     border: 1px solid $table-b-cl;
-    transition: all $animation;
+    transition: all $anim;
 
     &--active,
     &:hover,

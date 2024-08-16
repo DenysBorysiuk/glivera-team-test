@@ -12,10 +12,14 @@
   }
 
   &__logo {
-    margin-bottom: 64px;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 64px;
+    }
   }
 
   &__nav {
-    margin-bottom: auto;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: auto;
+    }
   }
 }
