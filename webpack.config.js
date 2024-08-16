@@ -68,7 +68,10 @@ module.exports = env => {
       }),
       new CleanWebpackPlugin(),
       new CopyPlugin({
-        patterns: [{ from: './src/images/sprite.svg', to: 'images' }],
+        patterns: [
+          { from: 'src/images/sprite.svg', to: 'images' },
+          { from: 'src/images/favicon.ico', to: 'favicon.ico' },
+        ],
       }),
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
