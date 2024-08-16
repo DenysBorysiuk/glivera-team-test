@@ -1,17 +1,29 @@
 .customers {
   box-sizing: border-box;
-  width: 968px;
-  height: 812px;
-  padding: 40px;
+  padding: 11px 20px 24px 20px;
   background-color: $white-cl;
   border-radius: 30px;
   box-shadow: 0px 10px 60px rgba(225, 236, 248, 0.5);
 
+  @media screen and (min-width: $tablet) {
+    padding: 22px 40px 48px 40px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 968px;
+  }
+
   &__user-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
   }
 
   &__title {
@@ -23,6 +35,11 @@
 
   &__status {
     color: $green-cl;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 0;
+    }
   }
 
   &__search {

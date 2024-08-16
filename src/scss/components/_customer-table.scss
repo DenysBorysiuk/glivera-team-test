@@ -3,14 +3,23 @@
   margin-bottom: 30px;
   border-collapse: collapse;
   text-align: left;
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 10px;
+  font-weight: 400;
+  overflow-x: auto;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    font-weight: 500;
+  }
 
   &__header {
     th {
-      font-weight: 500;
       color: $subtitle-font-cl;
       padding-bottom: 14px;
+
+      @media screen and (min-width: $tablet) {
+        font-weight: 500;
+      }
     }
   }
 
@@ -24,10 +33,14 @@
   &__cell--status {
     display: flex;
     justify-content: center;
-    width: 80px;
+    width: 45px;
     border-radius: 4px;
     padding: 4px 0;
     border: 1px solid;
+
+    @media screen and (min-width: $tablet) {
+      width: 80px;
+    }
   }
 
   &__cell--status-active {

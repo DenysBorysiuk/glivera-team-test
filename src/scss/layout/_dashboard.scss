@@ -1,7 +1,20 @@
 .dashboard {
   display: flex;
   gap: 71px;
-  // height: 100vh;
+
+  &__content {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 100%;
+
+    @media screen and (min-width: $tablet) {
+      padding: 0 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 0;
+    }
+  }
 
   &__header {
     padding-top: 40px;
