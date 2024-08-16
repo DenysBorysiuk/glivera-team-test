@@ -1,1 +1,1 @@
-# webpack_boilerplate
+# glivera-team-test
