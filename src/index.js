@@ -3,4 +3,4 @@ import 'normalize.css';
 import './scss/main.scss';
 
 // js
-import './js/table.js';
+import './js/pagination.js';

@@ -1,11 +1,9 @@
 import { data } from './data';
 
 const tableBody = document.querySelector('tbody');
-const paginationList = document.querySelector('.pagination-list');
-
 const itemsPerPage = 8;
 
-function renderTable(page) {
+export function renderTable(page) {
   tableBody.innerHTML = '';
   const start = (page - 1) * itemsPerPage;
   const end = page * itemsPerPage;
@@ -27,32 +25,3 @@ function renderTable(page) {
     tableBody.appendChild(row);
   });
 }
-
-function renderPagination() {
-  paginationList.innerHTML = '';
-  const totalPages = Math.ceil(data.length / itemsPerPage);
-
-  for (let i = 1; i <= totalPages; i++) {
-    const pageItem = document.createElement('li');
-    pageItem.className = 'pagination__item';
-    pageItem.innerHTML = `<a href="#" class="pagination__link ${
-      i === 1 ? 'pagination__link--active' : ''
-    }" data-page="${i}">${i}</a>`;
-    paginationList.appendChild(pageItem);
-  }
-}
-
-paginationList.addEventListener('click', function (e) {
-  e.preventDefault();
-  if (e.target.classList.contains('pagination__link')) {
-    document
-      .querySelector('.pagination__link--active')
-      .classList.remove('pagination__link--active');
-    e.target.classList.add('pagination__link--active');
-    const page = parseInt(e.target.dataset.page);
-    renderTable(page);
-  }
-});
-
-renderTable(1); // рендеринг первой страницы
-renderPagination();
